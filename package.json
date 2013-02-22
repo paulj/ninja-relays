@@ -1,5 +1,5 @@
 {
-  "name": "usb_relays",
+  "name": "ninja-relays",
   "version": "0.0.1",
   "description": "Ninja Block Module for USB Relay Modules",
   "main": "index.js",
