@@ -39,14 +39,9 @@ function myModule(opts,app) {
     var serial = Relay.prepareSerial("/dev/tty.usbserial-A901J12P");
 
     // Register a device
-    self.emit('register', new Relay(0, serial));
-    self.emit('register', new Relay(1, serial));
-    self.emit('register', new Relay(2, serial));
-    self.emit('register', new Relay(3, serial));
-    self.emit('register', new Relay(4, serial));
-    self.emit('register', new Relay(5, serial));
-    self.emit('register', new Relay(6, serial));
-    self.emit('register', new Relay(7, serial));
+    for (var i = 0; i < 8; ++i) {
+      self.emit('register', new Relay(i, serial));  
+    }
   });
 };
 
